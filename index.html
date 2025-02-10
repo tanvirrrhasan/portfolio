@@ -3,128 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tanvir Hasan</title>
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(120deg, #aa532b, #f804cf);
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            color: rgb(255, 255, 255);
-            overflow-x: hidden;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 50px auto;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(10px);
-        }
-
-        .name {
-            font-size: 60px;
-            font-weight: bold;
-            margin-bottom: 10px;
-            background: linear-gradient(45deg, #1f8d9c, #23ff06);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-size: 200% 200%;
-            display: inline-block;
-            transition: background-position 0.3s ease-in-out;
-        }
-
-        .name:hover {
-            animation: moveGradient 1s infinite alternate;
-        }
-
-        @keyframes moveGradient {
-            0% {
-                background-position: left;
-            }
-            100% {
-                background-position: right;
-            }
-        }
-
-        h2 {
-            font-size: 26px;
-            margin-top: 20px;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-
-        .contact {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 30px;
-        }
-
-        .contact a {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 12px 20px;
-            text-decoration: none;
-            color: white;
-            border-radius: 25px;
-            font-size: 18px;
-            font-weight: bold;
-            transition: 0.3s;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .contact a:hover {
-            transform: scale(1.05);
-        }
-
-        .contact a img {
-            width: 25px;
-            height: 25px;
-        }
-
-        .phone { background: linear-gradient(45deg, #4CAF50, #2E7D32); }
-        .whatsapp { background: linear-gradient(45deg, #25D366, #128C7E); }
-        .facebook { background: linear-gradient(45deg, #1877F2, #0e52a5); }
-        .messenger { background: linear-gradient(45deg, #0084FF, #FF00FF); }
-        .tiktok { background: linear-gradient(45deg, #000000, #ff0050); }
-        .email { background: linear-gradient(45deg, #D44638, #B23121); }
-        .telegram { background: linear-gradient(45deg, #0088CC, #229ED9); }
-
-        .profile-img {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            margin-bottom: 20px;
-        }
-
-    </style>
+    <title>Tanvir Hasan - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div class="container">
-        <img src="profile.jpg" alt="Profile Picture" class="profile-img">
-        <div class="name">Tanvir Hasan</div>
-        <p>Hello! Here you will find the contact details for all my social media profiles and you can learn more about me.</p>
-        
-        <h2>Education</h2>
-        <p>Currently studying Management (Honors).</p>
-        
-        <h2>Contact</h2>
-        <div class="contact">
-            <a href="tel:+8801774673399" class="phone">Phone</a>
-            <a href="https://wa.me/8801774673399" class="whatsapp">WhatsApp</a>
-            <a href="https://www.facebook.com/tanvirrrhasan" class="facebook">Facebook</a>
-            <a href="https://m.me/tanvirrrhasan" class="messenger">Messenger</a>
-            <a href="https://www.tiktok.com/@tanvirrrhasan" class="tiktok">TikTok</a>
-            <a href="mailto:tanvirrrhasan@gmail.com" class="email">Email</a>
-            <a href="https://t.me/tanvirrrhasan" class="telegram">Telegram</a>
+        <div class="profile-card">
+            <div class="profile-header">
+                <div class="profile-img">
+                    <img src="profile.jpg" alt="Tanvir Hasan">
+                </div>
+                <div class="profile-name">
+                    <h1>Tanvir Hasan</h1>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="tel:+8801774673399" class="social-link phone">
+                    <i class="fas fa-phone"></i>
+                    <span>Call Me</span>
+                </a>
+                <a href="https://wa.me/8801774673399" class="social-link whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp</span>
+                </a>
+                <a href="https://t.me/tanvirrrhasan" class="social-link telegram">
+                    <i class="fab fa-telegram"></i>
+                    <span>Telegram</span>
+                </a>
+                <a href="https://www.tiktok.com/@tanvirrrhasan" class="social-link tiktok">
+                    <i class="fab fa-tiktok"></i>
+                    <span>TikTok</span>
+                </a>
+                <a href="https://m.me/tanvirrrhasan" class="social-link messenger">
+                    <i class="fab fa-facebook-messenger"></i>
+                    <span>Messenger</span>
+                </a>
+                <a href="https://facebook.com/tanvirrrhasan" class="social-link facebook">
+                    <i class="fab fa-facebook"></i>
+                    <span>Facebook</span>
+                </a>
+                <a href="https://instagram.com/tanvirrrhasan" class="social-link instagram">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+                <a href="mailto:tanvirrrhasan@gmail.com" class="social-link email">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email</span>
+                </a>
+            </div>
         </div>
     </div>
+
+    <!-- Add modal structure -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <img src="profile.jpg" alt="Tanvir Hasan" class="modal-img">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
-</html>
+</html> 
