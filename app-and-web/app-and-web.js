@@ -1,0 +1,1 @@
+console.log("App and Web Development JS loaded"); 
