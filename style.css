@@ -364,35 +364,34 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    /* Responsive Navigation Bar */
     .top-bar {
-        padding: 5px 0;
-        background: rgba(10, 10, 25, 0.5); /* Slightly more solid for readability */
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
+        padding: 10px 0;
     }
 
     .navigation {
-        gap: 5px;
-        padding: 5px 10px;
+        gap: 10px;
+        padding: 10px;
     }
 
     .nav-link {
-        padding: 6px 14px;
-        font-size: 0.9rem;
-        border-radius: 30px;
-    }
-
-    .nav-link.active,
-    .nav-link:hover {
-        transform: translateY(0); /* Remove hover effect on mobile */
-        box-shadow: none;
+        padding: 8px 15px;
+        font-size: 14px;
     }
 
     .nav-link.active {
-         background-image: linear-gradient(45deg, #3a22e2, #5a7edc);
+        background: linear-gradient(45deg, #7b2ff7, #f107a3);
+        color: white;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.589);
+        transform: translateY(-5px);
+        border: none;
     }
-    
+
+    .nav-link.active:hover {
+        background: linear-gradient(45deg, #7b2ff7, #f107a3);
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(8, 253, 41, 0.596);
+    }
+
     .container {
         padding: 15px;
     }
@@ -453,6 +452,30 @@ body {
     
     .social-link span {
         font-size: 14px;
+    }
+
+    .navigation {
+        gap: 5px;
+        padding: 5px;
+    }
+
+    .nav-link {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .nav-link.active {
+        background: linear-gradient(45deg, #7b2ff7, #f107a3);
+        color: white;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.589);
+        transform: translateY(-5px);
+        border: none;
+    }
+
+    .nav-link.active:hover {
+        background: linear-gradient(45deg, #7b2ff7, #f107a3);
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(8, 253, 41, 0.596);
     }
 }
 
