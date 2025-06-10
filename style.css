@@ -89,9 +89,17 @@ body {
 }
 
 .nav-link.active {
-    background-image: linear-gradient(45deg, #3d08ff, #678ee2, #1826f2);
+    background: linear-gradient(45deg, #7b2ff7, #f107a3);
+    color: white;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.589);
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.87);
+    border: none;
+}
+
+.nav-link.active:hover {
+    background: linear-gradient(45deg, #7b2ff7, #f107a3);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(8, 253, 41, 0.596);
 }
 
 .profile-img {
