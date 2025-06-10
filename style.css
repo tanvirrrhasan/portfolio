@@ -33,6 +33,8 @@ body {
     padding: 20px;
     padding-top: 80px; /* Space for top-bar */
     overflow-x: hidden;
+    margin: 0;
+    position: relative;
 }
 
 .container {
@@ -596,4 +598,44 @@ body.modal-open .profile-card {
 .modal-closed .social-links .social-link:nth-child(7) { animation-delay: 0.7s; }
 .modal-closed .social-links .social-link:nth-child(8) { animation-delay: 0.8s; }
 .modal-closed .social-links .social-link:nth-child(9) { animation-delay: 0.9s; }
-.modal-closed .social-links .social-link:nth-child(10) { animation-delay: 1.0s; } 
+.modal-closed .social-links .social-link:nth-child(10) { animation-delay: 1.0s; }
+
+/* Purple Dream Background Animation */
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    position: relative;
+}
+
+.bg {
+    animation: slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #7b2ff7 50%, #f107a3 50%);
+    bottom: 0;
+    left: -50%;
+    opacity: .5;
+    position: fixed;
+    right: -50%;
+    top: 0;
+    z-index: -1;
+}
+
+.bg2 {
+    animation-direction: alternate-reverse;
+    animation-duration: 4s;
+}
+
+.bg3 {
+    animation-duration: 5s;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(-25%);
+    }
+    100% {
+        transform: translateX(25%);
+    }
+} 
