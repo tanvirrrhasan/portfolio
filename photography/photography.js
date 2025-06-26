@@ -73,15 +73,34 @@ document.addEventListener("DOMContentLoaded", function() {
       const photosRef = storage.ref().child('photos');
       const result = await photosRef.listAll();
       
-      result.items.forEach(async (imageRef) => {
+      // Fetch metadata for all images
+      const itemsWithMeta = await Promise.all(result.items.map(async (imageRef) => {
         try {
-          const url = await imageRef.getDownloadURL();
+          const metadata = await imageRef.getMetadata();
+          return { imageRef, created: metadata.timeCreated };
+        } catch (error) {
+          console.error(`Failed to get metadata for ${imageRef.fullPath}`, error);
+          return { imageRef, created: null };
+        }
+      }));
+
+      // Sort by creation time descending (newest first)
+      itemsWithMeta.sort((a, b) => {
+        if (!a.created) return 1;
+        if (!b.created) return -1;
+        return new Date(b.created) - new Date(a.created);
+      });
+
+      // Display images in sorted order
+      for (const item of itemsWithMeta) {
+        try {
+          const url = await item.imageRef.getDownloadURL();
           const photoItem = createPhotoItem(url);
           photoGallery.appendChild(photoItem);
         } catch (error) {
-          console.error(`Failed to get URL for ${imageRef.fullPath}`, error);
+          console.error(`Failed to get URL for ${item.imageRef.fullPath}`, error);
         }
-      });
+      }
     } catch (error) {
       console.error('Error loading images from Firebase:', error);
     }
